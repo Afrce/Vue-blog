@@ -129,3 +129,13 @@ export const updateArt = (params) => {
     return initRequest().post('/updateArt', Qs.stringify(params)).then(res => res.data).catch(errorHandle)
 }
 
+export default function checkNow() {
+    if (localStorage.getItem('jwt') == null){
+        return false
+    }
+    if (Number(localStorage.getItem('exp')) < new Date().getTime()/1000){
+        return false
+    }
+    return true
+}
+

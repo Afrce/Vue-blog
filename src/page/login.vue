@@ -49,7 +49,8 @@
                 APP.loginLoading = true;
                 login({'username': APP.userName, 'password': APP.password}).then(function (data) {
                     if(data.status){
-                        localStorage.setItem('jwt',data.data)
+                        localStorage.setItem('jwt',data.data.token)
+                        localStorage.setItem('exp',data.data.exp)
                         APP.$notify({
                             title: '登录成功',
                             message: '登录成功',
