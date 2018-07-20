@@ -1,6 +1,6 @@
 <template>
     <div class="content">
-        <div class="header">
+        <div class="admin-header">
             <span class="logo">
                 后台管理
             </span>
@@ -58,7 +58,7 @@
     .content{
         height: 100%;
     }
-    .header{
+    .admin-header{
         width: 100%;
         height:10%;
         background-color: rgb(84, 92, 100);
