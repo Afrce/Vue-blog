@@ -27,7 +27,10 @@
                                     <span>{{o.title}}</span>
                                     <div class="bottom clearfix">
                                         <time class="time">{{o.created_at.substring(0,16)}}</time>
-                                        <span>{{o.type}} && {{o.key}}</span>
+                                        <span style="margin-left: 10px">
+                                            <i class="fa fa-tag" aria-hidden="true"></i> {{o.type}}
+                                            <i class="fa fa-tag" aria-hidden="true"></i> {{ o.key }}
+                                        </span>
                                     </div>
                                 </div>
                             </el-card>
