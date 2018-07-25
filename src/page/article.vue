@@ -2,8 +2,14 @@
     <div class="editorContainer mdContainer">
         <Header></Header>
         <div class="content-header content-center">
-            <h4>{{html.title}}</h4>
-            <p><span class="span left">{{html.key}}</span><span class="span right">{{html.created_at}}</span></p>
+            <h4 class="left">{{html.title}}</h4>
+            <div class="clear"></div>
+            <p class="article-info left">
+                <span>分类：{{html.type}} </span>
+                <span>关键字：{{html.key}} </span>
+                <span>阅读：88 </span>
+                <span>时间：{{html.created_at}} </span>
+            </p>
         </div>
         <div class="clear"></div>
         <div class="content-center previewContainer markdown-body" v-html="html.content">
@@ -56,6 +62,7 @@
         min-width: 850px;
         margin: 0 auto;
         padding-top: 15px;
+        padding-bottom: 20px;
     }
     .content-header{
         text-align: center;
@@ -81,5 +88,13 @@
     }
     .mdContainer{
         background-color: white !important;
+    }
+    .previewContainer{
+        height: auto !important;
+    }
+    .article-info{
+        font-size: 14px;
+        padding-top: 20px;
+        color: #8F938F;
     }
 </style>

@@ -74,7 +74,6 @@
     .aside{
         height: 100%;
         background-color: rgb(84, 92, 100);
-        min-width: 175px;
     }
     .main{
         height: 90%;
